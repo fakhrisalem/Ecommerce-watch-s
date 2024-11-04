@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+  
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+   
+   body {
+    margin: 0;
+    padding-top: 70px; 
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #d9f7f5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    z-index: 10;
+    font-size: 15px;
+
+}
+
+header a {
+    color: rgb(17, 16, 16);
+    text-decoration: none;
+    margin: 0 50px;
+    position: relative; 
+    padding: 1px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    transition: border-color 0.3s; 
+}
+
+header a:hover::after, 
+header a:focus::after, 
+header a:active::after { 
+    border-color: rgba(255, 255, 255, 0.8); 
+}
+
+header a:hover {
+    background-color: rgba(247, 13, 13, 0.2); 
+    border-radius: 25px;
+    color: white; 
+  padding: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px; 
+}
+.left-links {
+    display: flex;
+    align-items: center; 
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block; 
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="left-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="products.html" class="dropdown-toggle">Products</a>
+                <div class="dropdown-menu">
+                    <a href="men.html">Men's Watches</a>
+                    <a href="women.html">Women's Watches</a>
+                 
+                </div>
+            </div>
+        </div>
+        <div class="center-link">
+            <form action="search.html" method="get">
+                <input type="text" name="search" class="search-input" placeholder="Search...">
+                <button type="submit" class="search">Search</button>
+            </form>
+        </div>
+        <div class="right-links">
+            <button class="btn" onclick="showLogin()"><img src="https://cdn1.iconfinder.com/data/icons/human-resources-27/65/54-256.png" alt="Cart" class="icon"></button>
+            <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/512/4012/4012571.png" alt="Cart" class="icon"></a>
+            <a href="wish.html"><img src="https://th.bing.com/th/id/R.448152ce941afc84468d2e7b5f052a43?rik=Rr3dhh1UTafG7w&pid=ImgRaw&r=0" alt="wish" class="icon"></a>
+        
+        </div>
+    </header>
