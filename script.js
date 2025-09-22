@@ -29,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             if (navLinks) {
                 navLinks.innerHTML = `
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
+                  
                 `;
             }
         }
