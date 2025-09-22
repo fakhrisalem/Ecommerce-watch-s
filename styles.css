@@ -630,6 +630,142 @@ button:hover {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+#add
+/* --- Responsive Adjustments --- */
+/* Target tablets and smaller screens */
+@media (max-width: 992px) {
+    .hero-container {
+        height: 500px;
+    }
+
+    .carousel-content h2 {
+        font-size: 28px;
+    }
+
+    .carousel-content p {
+        font-size: 18px;
+    }
+
+    .login-container {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .background-slider {
+        flex-direction: column;
+        padding: 50px;
+        margin: 50px auto;
+        height: auto;
+    }
+    
+    #productImage {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 50px;
+    }
+
+    .brand-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .text-content1 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .products {
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px 20px;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .events .event-item .img-fluid {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Target mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .hero-container {
+        height: 400px;
+    }
+
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 16px;
+    }
+
+    .btn-menu, .btn-book {
+        padding: 8px 16px;
+        margin: 0 10px;
+    }
+    
+    .products {
+        margin: 30px 10px;
+    }
+
+    .product img {
+        border-radius: 40px;
+    }
+    
+    .slider1 h2.title {
+        font-size: 24px;
+    }
+
+    .slide4 {
+        min-width: 100%; /* Show one product at a time */
+    }
+    
+    .slide4 img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    
+    .events .swiper-container {
+        width: 95%;
+        height: auto;
+        margin: 50px auto;
+    }
+
+    .events .event-item {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .events .event-item .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+}
 
 .gallery-item:hover .overlay {
     opacity: 1;
