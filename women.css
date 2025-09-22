@@ -39,7 +39,7 @@ a {
 
 .products-section {
     flex: 1;
-    min-width: 0; /* Ensures proper wrapping on smaller screens */
+    min-width: 0;
 }
 
 /* Products and Categories Grid */
