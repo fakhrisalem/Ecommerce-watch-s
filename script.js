@@ -1,3 +1,52 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    const updateNav = () => {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
+            if (navLinks) {
+                if (currentUser.is_admin) {
+                    navLinks.innerHTML = `
+                        <li><a href="dashboard_admin.html">Dashboard</a></li>
+                        <li><a href="add_book.html">Add Book</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    `;
+                } else {
+                    navLinks.innerHTML = `
+                        <li><a href="dashboard_user.html">Dashboard</a></li>
+                        <li><a href="my_borrowed.html">My Borrowed</a></li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                    `;
+                }
+            }
+        } else {
+            if (navLinks) {
+                navLinks.innerHTML = `
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                `;
+            }
+        }
+    };
+    updateNav();
+
+    document.addEventListener('click', (e) => {
+        if (e.target && e.target.id === 'logout-link') {
+            localStorage.removeItem('currentUser');
+            alert('Logged out successfully.');
+            window.location.href = 'index.html';
+        }
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
         interval: 4000, 
